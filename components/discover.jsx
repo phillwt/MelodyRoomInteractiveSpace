@@ -6,12 +6,25 @@ export default function DiscoverElement() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
-
+const musicTest = [1, 2, 3];
     const music = {
         image: ["/aespa.jpg", "/kinggizzard.jpg", "/sabcarp.jpg"],
         albumName: ["Savage - The 1st Mini Album", "Phantom Island", "Nonsense"],
         artistName: ["aespa", "King Gizzard and the Lizard Wizard", "Sabrina Carpenter"]
     }
+ const [count, setCount] = useState(0);
+
+    useEffect(()=>{
+        setInterval(() => {
+            if(count<2){
+                            setCount(count+1)
+
+            }else{
+                setCount(0)
+            }
+        }, 1000);
+    }, [])
+
 
     let im = "";
     let alb = "";
@@ -19,7 +32,7 @@ export default function DiscoverElement() {
     let countA = 0;
 
 const AutoTimer = () => {
-  const [count, setCount] = useState(0);
+ 
 
   // This is the function that triggers every 2 seconds
   const myRepeatedFunction = () => {
@@ -111,6 +124,7 @@ const AutoTimer = () => {
                 <h3>Nonsense</h3>
                 <h5>Sabrina Carpenter</h5>
             </div>
+            <h1>{musicTest[count]}</h1>
         </div>
     );
 }
