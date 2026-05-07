@@ -102,12 +102,13 @@ export default function Share() {
 
         {/* Pfp icons */}
         <div>
+          {/* Elodie */}
           <div style={{
             position: "absolute",
-            height: "80pt",
-            width: "80pt",
-            left: "5.8rem",
-            bottom: "100pt",
+            height: "100pt",
+            width: "100pt",
+            left: "7rem",
+            bottom: "155pt",
             borderRadius: "5px",
             backgroundColor: "white",
             backgroundImage: `url(${songPictures[song]})`, 
@@ -118,8 +119,8 @@ export default function Share() {
             position: "absolute",
             left: "5rem",
             bottom: "-10pt",
-            height: "100pt",
-            width: "100pt",
+            height: "150pt",
+            width: "150pt",
             backgroundImage: "url(/elodie-ume-pfp.jpg)",
             backgroundColor: "white",
             borderRadius: "50%",
@@ -127,13 +128,13 @@ export default function Share() {
             border: "2px solid white"
         }}></div>
 
-
+          {/* Other user (Kevin?) */}
           <div style={{
             position: "absolute",
-            height: "80pt",
-            width: "80pt",
-            top: "-4.5rem",
-            right: "6rem",
+            height: "100pt",
+            width: "100pt",
+            top: "-3.5rem",
+            right: "12.2rem",
             borderRadius: "5px",
             backgroundColor: "white",
             backgroundImage: `url(${songPictures[receivedSong]})`, 
@@ -142,10 +143,10 @@ export default function Share() {
           }}></div>
           <div style={{
             position: "absolute",
-            height: "100pt",
-            width: "100pt",
-            top: "40pt",
-            right: "5rem",
+            height: "150pt",
+            width: "150pt",
+            top: "70pt",
+            right: "10rem",
             backgroundImage: "url(/kevin-pfp.jpg)",
             backgroundColor: "white",
             borderRadius: "50%",
@@ -170,7 +171,7 @@ export default function Share() {
               style={{
                 animation: send ? "draw 4.0s ease forwards" : "none",
               }}
-              d="M 80 140 C 300 150, 200 50, 420 30"
+              d="M 100 130 C 300 130, 200 50, 400 50"
             />
           </svg>
         </div>

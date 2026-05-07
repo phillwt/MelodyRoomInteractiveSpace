@@ -23,8 +23,8 @@
   width: 2.5rem;
   border-radius: 50%;
   position: absolute;
-  left: 3rem;
-  bottom: 125pt;
+  left: 4.2rem;
+  bottom: 190pt;
   /* border: solid 1pt white; */
 }
 
@@ -49,8 +49,8 @@
   width: 2.5rem;
   border-radius: 50%;
   position: absolute;
-  left: 12.8rem;
-  bottom: 125pt;
+  left: 15.6rem;
+  bottom: 190pt;
   /* border: solid 1pt white; */
 }
 
@@ -71,12 +71,12 @@
   /* background: rgb(36, 36, 36); */
   background: none;
   border: none;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
   border-radius: 50%;
   position: absolute;
-  left: 14rem;
-  bottom: 2rem;
+  left: 18.5rem;
+  bottom: 4rem;
   border: solid 1pt white;
   padding: 1px 0 0 1px;
 }
