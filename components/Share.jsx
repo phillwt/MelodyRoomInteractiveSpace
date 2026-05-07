@@ -114,6 +114,7 @@ export default function Share() {
             backgroundImage: `url(${songPictures[song]})`, 
             backgroundSize: "cover",
             backgroundPosition: "center",
+            boxShadow: "0px 4px 5.8px 0px rgba(0, 0, 0, 0.3)"
           }}></div>
           <div style={{
             position: "absolute",
@@ -140,6 +141,7 @@ export default function Share() {
             backgroundImage: `url(${songPictures[receivedSong]})`, 
             backgroundSize: "cover",
             backgroundPosition: "center",
+            boxShadow: "0px 4px 5.8px 0px rgba(0, 0, 0, 0.3)"
           }}></div>
           <div style={{
             position: "absolute",
