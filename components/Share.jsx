@@ -20,13 +20,13 @@ export default function Share() {
   ];
 
   // FOR TESTING PURPOSES
+  // Shows index of current song in console
   useEffect(() => {
   console.log("Current song index:", song);
 }, [song]);
 
-  // Called by button click
+  // Called by nextBtn click
   // "Skips" to next song in array, and resets to beginning at end of array
-  // Sets second song cover div to same song after a 2.0s delay (duration of path draw)
   function nextSong() {
     let nextValue;
 
@@ -38,6 +38,8 @@ export default function Share() {
     setSong(nextValue);
   }
 
+  // Called by prevBtn click
+  // Goes to previous song in array, and resets to end of array at index 0
   function prevSong() {
     let prevValue
 
@@ -49,6 +51,10 @@ export default function Share() {
     setSong(prevValue)
   }
 
+  // Call by sendBtn click
+  // Begins line draw animation by setting send=true
+  // Sets Kevin's song cover image to the "sent" img after 1.5s (approx. duration of line draw animation)
+  // Sets send=false after 2.0s to make line disappear
   function handleSend() {
     setSend(true);
     const sendingSong = song;
