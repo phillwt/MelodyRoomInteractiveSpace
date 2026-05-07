@@ -32,11 +32,21 @@ export default function Share() {
 
     if(song < 8) {
       nextValue = song + 1;
-    } else if (song >= 8) {
+    } else if(song >= 8) {
       nextValue = 0;
     }
-
     setSong(nextValue);
+  }
+
+  function prevSong() {
+    let prevValue
+
+    if(song > 0) {
+      prevValue = song - 1;
+    } else if(song <= 0) {
+      prevValue = 8;
+    }
+    setSong(prevValue)
   }
 
   function handleSend() {
@@ -79,7 +89,12 @@ export default function Share() {
         }}>
 
         {/* Buttons */}
-        <button onClick={() => handleSend()}>Send</button>
+        <button className={styles.sendBtn} onClick={() => handleSend()}>
+          <img src="/send-icon.png"></img>
+        </button>
+        <button className={styles.prevBtn} onClick={() => prevSong()}>
+          <img src="/prev-icon.png"></img>
+        </button>
         <button className={styles.nextBtn} onClick={() => nextSong()}>
           <img src="/skip-forward-icon.png"></img>
         </button>

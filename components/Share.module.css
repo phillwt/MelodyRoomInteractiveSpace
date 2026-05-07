@@ -9,10 +9,36 @@
 .arrowPath {
   fill: none;
   stroke: #f3ecff;
-  stroke-width: 2;
+  stroke-width: 1;
   stroke-linecap: round;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
+}
+
+.prevBtn {
+  z-index: 50;
+  background: rgb(36, 36, 36);
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 3rem;
+  bottom: 125pt;
+  /* border: solid 1pt white; */
+}
+
+.prevBtn img {
+  height: 60%;
+  width: 60%
+}
+
+.prevBtn:hover {
+  background: rgb(47, 47, 47)
+}
+
+.prevBtn:active {
+  border: solid 1pt rgb(255, 255, 255);
 }
 
 .nextBtn {
@@ -23,12 +49,42 @@
   width: 2.5rem;
   border-radius: 50%;
   position: absolute;
-  left: 7.9rem;
-  bottom: 170pt;
-  border: solid 1pt white;
+  left: 12.8rem;
+  bottom: 125pt;
+  /* border: solid 1pt white; */
 }
 
 .nextBtn img {
   height: 60%;
   width: 60%
+}
+
+.nextBtn:hover {
+  background: rgb(47, 47, 47)
+}
+
+.nextBtn:active {
+  border: solid 1pt rgb(255, 255, 255);
+}
+
+.sendBtn {
+  /* background: rgb(36, 36, 36); */
+  background: none;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 14rem;
+  bottom: 2rem;
+  border: solid 1pt white;
+  padding: 1px 0 0 1px;
+}
+
+.sendBtn:hover {
+  background: rgba(255, 255, 255, 0.136);
+}
+
+.sendBtn:active {
+  border: solid 1pt rgb(166, 166, 166);
 }
