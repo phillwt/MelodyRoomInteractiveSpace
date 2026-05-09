@@ -12,12 +12,14 @@ export default function DiscoverElement() {
     const [notePadding, setNotePadding] = useState(0);
     const [noteColor, setNoteColor] = useState("");
     const musicList = {
-        image: ["/aespa.jpg", "/kinggizzard.jpg", "/sabcarp.jpg"],
-        albumName: ["Savage - The 1st Mini Album", "Phantom Island", "Nonsense"],
-        artistName: ["aespa", "King Gizzard and the Lizard Wizard", "Sabrina Carpenter"],
+        image: ["/aespa.jpg", "/kinggizzard.jpg", "/sabcarp.jpg", "/charli.png", "/kendrick.png"],
+        albumName: ["Savage - The 1st Mini Album", "Phantom Island", "Nonsense", "brat", "To Pimp A Butterfly"],
+        artistName: ["aespa", "King Gizzard and the Lizard Wizard", "Sabrina Carpenter", "Charli xcx", "Kendrick Lamar"],
         artistText: ["aespa is a South Korean girl group formed by SM Entertainment. Known for blending futuristic concepts with powerful vocals and choreography, the group includes Karina, Winter, Giselle, and Ningning. Their hit songs, including “Next Level” and “Supernova,” have made them global K-pop stars with a rapidly growing international fanbase.",
             "King Gizzard & the Lizard Wizard is an Australian experimental rock band celebrated for its genre-blending sound and prolific output. Formed in Melbourne in 2010, the group explores psychedelic rock, jazz, metal, and electronic music. Known for energetic live performances and ambitious concept albums, they have built a passionate global fan community over time.",
-            "Sabrina Carpenter is an American singer, songwriter, and actress known for her catchy pop music and charismatic performances. Rising to fame through television before launching a successful music career, she gained widespread attention with hits like “Espresso” and “Please Please Please,” earning a strong global fanbase and critical recognition in recent years."
+            "Sabrina Carpenter is an American singer, songwriter, and actress known for her catchy pop music and charismatic performances. Rising to fame through television before launching a successful music career, she gained widespread attention with hits like “Espresso” and “Please Please Please,” earning a strong global fanbase and critical recognition in recent years.",
+            "Charli XCX is a British pop artist known for futuristic production, experimental songwriting, and influential collaborations. Rising from underground electronic music scenes, she became a major force in hyperpop and mainstream pop alike. Her bold visuals, innovative albums, and energetic performances have earned critical acclaim and a devoted international fanbase.",
+            "Kendrick Lamar is an American rapper and songwriter acclaimed for complex lyricism, storytelling, and socially conscious themes. Emerging from Compton, California, he gained worldwide recognition through critically celebrated albums blending hip hop, jazz, and funk influences. His music explores identity, inequality, fame, and resilience, earning numerous awards and widespread cultural influence."
         ]
     }
     let [musicImage, setMusicImage] = useState("/aespa.jpg");
@@ -51,7 +53,7 @@ export default function DiscoverElement() {
                     } else {
                         // When we hit 100, reset progress and trigger song change
                         switchSongs(count);
-                        if (count < 2) {
+                        if (count < 4) {
                             setCount(count + 1)
                         } else {
                             setCount(0)
