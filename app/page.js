@@ -17,7 +17,9 @@ export default function Home() {
           setComponent(componentList[1]);
         }
       }}>Switch Components</button>
-      <div>{component}</div>
+      <div style={{
+        border: "white 5px solid"
+      }}>{component}</div>
 
     </div>
   );

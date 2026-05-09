@@ -1,11 +1,16 @@
 "use client"
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import styles from "./discoverstyle.css";
+
 
 export default function DiscoverElement() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+    const [notePadding, setNotePadding] = useState(0);
+    const [noteColor, setNoteColor] = useState("");
     const musicList = {
         image: ["/aespa.jpg", "/kinggizzard.jpg", "/sabcarp.jpg"],
         albumName: ["Savage - The 1st Mini Album", "Phantom Island", "Nonsense"],
@@ -32,30 +37,12 @@ export default function DiscoverElement() {
         console.log(setMusicArtist);
     };
 
-    // useEffect(() => {
-    //     if(isPaused === false){
-    //       const interval = setInterval(() => {
-    //         if (count < 2) {
-    //             setCount(count + 1)
-
-    //         } else {
-    //             setCount(0)
-    //         }
-    //         switchSongs(count);
-    //     }, 2000);
-    //     return () => {
-    //         if (interval) {
-    //             clearInterval(interval);
-    //         }
-    //     };  
-    //     }
-
-    // })
-
     useEffect(() => {
         let interval = null;
 
         if (isPaused === false) {
+            setNotePadding(20);
+            setNoteColor("");
             // Run every 20ms (20ms * 100 steps = 2000ms total)
             interval = setInterval(() => {
                 setProgressBar((progressBar) => {
@@ -73,6 +60,9 @@ export default function DiscoverElement() {
                     }
                 });
             }, 20); // 20ms for smooth 2-second loop
+        } else if (isPaused) {
+            setNotePadding(50);
+            setNoteColor("#915FFF");
         }
 
         return () => {
@@ -82,21 +72,36 @@ export default function DiscoverElement() {
         };
     })
 
+    useEffect(() => {
+        if (count === 0) {
+            setMusicText(musicList["artistText"][musicList.artistText.length - 1]);
+        } else {
+            setMusicText(musicList["artistText"][count - 1]);
+        }
+    }, [isHovered])
+
     return (
         <div style={{
-            width: "1500px",
-            height: "0750px",
-            backgroundColor: "blue",
+            width: "100%",
+            height: "650px",
+            background: "linear-gradient(to bottom, #582474 0%, #190E32 75%)",
             display: "flex",
             justifyContent: "space-around",
-            alignItems: "center",
+            alignItems: "baseline",
+            paddingTop: "100px",
+            paddingBottom: "100px",
         }}>
-            <div>
+            <div style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                alignItems: "center",
+            }}>
                 <Image
-                    src="/Note.svg" // Corresponds to /public/profile.png
+                    src="/Note.svg"
                     alt="Music Note"
-                    width={250}
-                    height={250}
+                    width={300}
+                    height={300}
                     onClick={() => {
                         if (isPaused) {
                             setIsPaused(false);
@@ -104,42 +109,74 @@ export default function DiscoverElement() {
                             setIsPaused(true);
                         }
                     }}
+                    style={{
+                        padding: `${notePadding}px`,
+                        backgroundColor: `${noteColor}`,
+                        borderRadius: "25px",
+                        boxShadow: "0px 0px 10px 10px rgba(0,0,0,0.5)",
+                        transition: "background-color 0.2s ease-in-out, padding 0.2s ease-in-out",
+                    }}
                 />
-                <p>Click on Icon to pause scroll</p>
+                <p>Click on Icon to pause scroll</p><p>& Hover over song for more info</p>
             </div>
 
-            <div>
-                <Image
-                    src={musicImage} // Corresponds to /public/profile.png
-                    alt="Music Note"
-                    width={250}
-                    height={250}
+            <div style={{
+
+            }}>
+                <div
                     style={{
-                        borderRadius: "25px",
+                        display: "flex",
+                        justifyContent: "center",
+                        gap: "20px",
+                        overflow: "hidden",
+                        maxWidth: isHovered ? "600px" : "340px",
+                        transition: "max-width 0.5s ease-in-out",
+                        margin: " 25px",
                     }}
-                    onMouseEnter={() => {
-                        if (isPaused) {
-                            if (count === 0) {
-                                setMusicText(musicList["artistText"][musicList.artistText.length-1]);
-                            } else {
-                                setMusicText(musicList["artistText"][count-1]);
-                            }
-                        }
-                    }}
-                    onMouseLeave={() => {
-                        setMusicText("");
-                    }} />
-                <h3>{musicAlbum}</h3>
-                <h5>{musicArtist}</h5>
-                <div style={{
-                    width: `${progressBar}%`,
-                    height: "25px",
-                    backgroundColor: "red",
-                    borderRadius: "12.5px",
-                }}></div>
-                <p style={{
-                    width: "250px"
-                }}>{musicText}</p>
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    <div>
+                        <Image
+                            src={musicImage}
+                            alt="Music Note"
+                            width={300}
+                            height={300}
+                            style={{
+                                borderRadius: "25px",
+                                border: "white, solid, 10px",
+                                boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.5)",
+                            }}
+                        />
+                        <h3 style={{
+                            margin: "5px",
+                        }}>{musicAlbum}</h3>
+                        <h5 style={{
+                            margin: "5px",
+                        }}>{musicArtist}</h5>
+                        <div style={{
+                            width: `${progressBar}%`,
+                            height: "25px",
+                            background: "linear-gradient(to right, #D9D9D9, #915FFF)",
+                            borderRadius: "12.5px",
+                            marginTop: "10px",
+                        }}></div>
+                    </div>
+
+                    <p
+                        style={{
+                            width: "250px",
+                            fontSize: "14px",
+                            color: "white",
+                            marginTop: "10px",
+                            /* Animation properties */
+                            transition: "all 0.5s ease-in-out",
+                            opacity: isHovered ? 1 : 0,
+                            transform: isHovered ? "translateY(10px)" : "translateY(0)",
+                            maxHeight: isHovered ? "200px" : "0px",
+                            overflow: "hidden"
+                        }}>{musicText}</p>
+                </div>
             </div>
         </div>
     );
