@@ -85,8 +85,8 @@ export default function DiscoverElement() {
     return (
         <div style={{
             width: "100%",
-            height: "650px",
-            background: "linear-gradient(to bottom, #582474 0%, #190E32 75%)",
+            height: "100vh",
+            background: "linear-gradient(#190E32 0%,  #915FFF 100%)",
             display: "flex",
             justifyContent: "space-around",
             alignItems: "baseline",

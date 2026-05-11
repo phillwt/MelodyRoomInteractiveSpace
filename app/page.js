@@ -9,7 +9,12 @@ export default function Home() {
   const componentList = [<DiscoverElement></DiscoverElement>, ""]
   return (
     <div>
-      <h1>Welcome to Melody Room</h1>
+      <div style={{
+        background: "linear-gradient(#915FFF 0%, #190E32 100%)",
+      }}>
+        <h1 style={{
+          fontSize: "100pt",
+        }}>Welcome to Melody Room</h1>
       <button onClick={() => {
         if (component === "") {
           setComponent(componentList[0]);
@@ -17,8 +22,8 @@ export default function Home() {
           setComponent(componentList[1]);
         }
       }}>Switch Components</button>
+      </div>
       <div style={{
-        border: "white 5px solid"
       }}>{component}</div>
 
     </div>
