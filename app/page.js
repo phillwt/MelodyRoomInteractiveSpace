@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { useState, useEffect } from "react";
 import DiscoverElement from "@/components/discover";
+import Listen from "@/components/Listen";
 
 export default function Home() {
   const [component, setComponent] = useState("");
@@ -26,6 +27,7 @@ export default function Home() {
       <div style={{
       }}>{component}</div>
 
+      <Listen></Listen>
     </div>
   );
 }
