@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import "@fontsource/momo-signature";
 
 // profile info
 const PROFILES = [

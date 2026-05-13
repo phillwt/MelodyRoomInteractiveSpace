@@ -5,12 +5,13 @@ import { useState, useEffect } from "react";
 import DiscoverElement from "@/components/discover";
 import Listen from "@/components/Listen";
 import Share from "@/components/Share";
-//import Connect from "@/components/Connect";
+import Connect from "@/components/Connect";
+
 
 export default function Home() {
   const [component, setComponent] = useState(<DiscoverElement></DiscoverElement>);
-  const componentList = [<DiscoverElement></DiscoverElement>, <Listen></Listen>, <Share></Share>];
-  const buttonList = ["Discover", "Listen", "Share"];
+  const componentList = [<DiscoverElement></DiscoverElement>, <Listen></Listen>, <Share></Share>, <Connect></Connect>];
+  const buttonList = ["Discover", "Listen", "Share", "Connect"];
   const [buttonText, setButtonText] = useState("Discover")
   const [componentNum, setComponentNum] = useState(1);
 
