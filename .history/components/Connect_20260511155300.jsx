@@ -421,8 +421,8 @@ export default function Connect() {
           >
             {/* Header — only Hailey + room label */}
             <div style={{
-              display:"grid", gridTemplateColumns:"1fr auto 1fr",
-              alignItems:"center",
+              display:"flex", alignItems:"center",
+              justifyContent:"space-between",
               padding:"12px 4px 10px",
               borderBottom:"1px solid rgba(255,255,255,0.07)",
             }}>
@@ -436,7 +436,6 @@ export default function Connect() {
               }}>
                 Melody Room with @hailey.reyes is active
               </div>
-              <div />
             </div>
 
             <div style={{ display:"flex", gap:12, flex:1, minHeight:0 }}>
