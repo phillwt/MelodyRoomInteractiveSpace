@@ -72,7 +72,7 @@ export default function Share() {
   return (
     <div
       style={{
-        background: "linear-gradient(#915FFF, #190E32)",
+        background: "linear-gradient(#190E32 0%,  #915FFF 100%)",
         minHeight: "100vh",
         padding: "1.5rem",
       }}
