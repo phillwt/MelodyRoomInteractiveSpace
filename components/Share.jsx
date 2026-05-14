@@ -78,14 +78,14 @@ export default function Share() {
       }}
     >
       {/* Header */}
-      <div>
+      {/* <div>
         <p style={{
             fontFamily: "Momo Signature, cursive",
             fontWeight: 400,
             fontStyle: "normal",
             fontSize: "4rem"
         }}>Share</p>
-      </div>
+      </div> */}
 
       {/* Interactive space (outter container) */}
       <div

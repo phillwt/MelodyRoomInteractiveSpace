@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import styles from "./Connect.module.css";
 
 // profile info
 const PROFILES = [
@@ -19,7 +20,7 @@ const QUEUE = [
 ];
 
 const CHAT_INIT = [
-  { id: 1, sender: "carly.j",  text: "omg I love this song 🎵" },
+  { id: 1, sender: "carly.j",  text: "omg I love this song 🩷" },
   { id: 2, sender: "hailey.r", text: "same!! it's been on repeat" },
   { id: 3, sender: "carly.j",  text: "add the next one to the queue?" },
 ];
@@ -209,7 +210,7 @@ function Chat({ messages, onSend }) {
             maxWidth: "80%",
           }}>
             <div style={{
-              background: msg.sender === "hailey.r" ? "rgba(192,132,252,0.3)" : "rgba(255,255,255,0.1)",
+              background: msg.sender === "hailey.r" ? "rgba(192,132,252,0.3)" : "rgba(145, 95, 255, 0.75)",
               borderRadius: msg.sender === "hailey.r" ? "12px 12px 2px 12px" : "12px 12px 12px 2px",
               padding: "7px 11px", color: "#fff", fontSize: 12, lineHeight: 1.4,
             }}>{msg.text}</div>
@@ -233,17 +234,17 @@ function Chat({ messages, onSend }) {
           onKeyDown={(e) => e.key === "Enter" && handleSend()}
           placeholder="Type a message…"
           style={{
-            flex: 1, background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.12)",
-            borderRadius: 8, padding: "7px 10px",
+            flex: 1, background: "rgba(145, 95, 255, 0.08)",
+            border: "1px solid rgba(255, 255, 255, 1)",
+            borderRadius: "15px", padding: "7px 10px",
             color: "#fff", fontSize: 12, outline: "none",
           }}
         />
         <button onClick={handleSend} style={{
           background: "rgba(192,132,252,0.28)",
-          border: "1px solid rgba(192,132,252,0.5)",
+          border: "1px solid rgba(255, 255, 255, 1)",
           borderRadius: 8, padding: "7px 12px",
-          color: "#c084fc", cursor: "pointer", fontSize: 13,
+          color: "#ffffff", cursor: "pointer", fontSize: 13,
         }}>↑</button>
       </div>
     </div>
@@ -323,8 +324,8 @@ export default function Connect() {
           background: linear-gradient(#190E32 0%,#915FFF 100%);
           position: relative; overflow: hidden;
         }
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: rgba(192,132,252,0.35); border-radius: 4px; }
+        // ::-webkit-scrollbar { width: 4px; }
+        // ::-webkit-scrollbar-thumb { background: rgba(192,132,252,0.35); border-radius: 4px; }
         @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
         @keyframes roomBorder {
           0%,100%{border-color:rgba(255,255,255,0.2)}
@@ -347,12 +348,12 @@ export default function Connect() {
       <div id="cw">
 
         {/* connect title */}
-        <div style={{
+        {/* <div style={{
           position:"absolute", top:18, right:26, zIndex:20, pointerEvents:"none",
           fontFamily:"Momo Signature", fontSize:36,
           color:"rgba(255,255,255,0.9)",
           textShadow:"0 2px 18px rgba(192,132,252,0.5)",
-        }}>Connect</div>
+        }}>Connect</div> */}
 
         {/* connecting phase */}
         {phase !== "room" && (
@@ -427,13 +428,13 @@ export default function Connect() {
             }}>
               <ProfileBubble profile={PROFILES[0]} />
               <div style={{
-                background:"rgba(80,30,160,0.85)",
+                background:"rgba(255, 255, 255, 0.85)",
                 border:"1px solid rgba(255,255,255,0.2)",
                 borderRadius:20, padding:"4px 16px",
-                color:"rgba(255,255,255,0.75)",
+                color:"rgba(0, 0, 0, 0.75)",
                 fontSize:11, fontFamily:"monospace", whiteSpace:"nowrap",
               }}>
-                Melody Room with @hailey.reyes is active
+                Melody Room with <span style ={{ color: "#915FFF"}}>@hailey.reyes</span> is active
               </div>
               <div />
             </div>

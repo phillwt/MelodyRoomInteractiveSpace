@@ -28,7 +28,7 @@ useEffect(() => {
   return (
     <div className={styles.page}>
         {/* Title */}
-      <div className={styles.title}>Listen</div> 
+      {/* <div className={styles.title}>Listen</div>  */}
 
         <div className={styles.centerWrapper}>
 
