@@ -32,23 +32,36 @@ export default function Home() {
       <header style={{
         background: "linear-gradient(#915FFF 0%, #190E32 100%)",
         display: "flex",
-        gap: "2rem",
+        // gap: "2rem",
         flexDirection: "column",
         width: "100%",
         height: "100%",
       }}>
 
-        <h1 style={{
-          fontSize: "4rem",
-        }}>Welcome to MelodyRoom</h1>
+        <img src="/Logo-White.svg" style={{
+          height: "4rem",
+          position: "absolute",
+          top: "1.5rem",
+          left: "1.5rem"
+        }}></img>
 
-        <h2 style={{
-          fontSize: "2.5rem",
-        }}>Your music is a vibe, why keep it to yourself?</h2>
+          <h1 style={{
+            fontSize: "4rem",
+            textAlign: "center",
+            marginTop: "1rem"
+          }}>Welcome to MelodyRoom</h1>
+
+        {/* <h2 style={{
+          fontSize: "2rem",
+          textAlign: "center",
+          marginTop: "0.25rem"
+        }}>Your music is a vibe, why keep it to yourself?</h2> */}
         <div style={{
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           gap: "1rem",
+          marginTop: "2rem",
           marginBottom: "1rem"
         }}>
           <h3 style={{

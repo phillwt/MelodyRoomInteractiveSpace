@@ -90,7 +90,7 @@ export default function DiscoverElement() {
             display: "flex",
             justifyContent: "space-around",
             alignItems: "baseline",
-            paddingTop: "200px",
+            paddingTop: "100px",
             paddingBottom: "100px",
         }}>
             <div style={{

@@ -146,3 +146,8 @@ a.secondary {
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-thumb { background: rgba(192,132,252,0.35); border-radius: 4px; }
+
+.pageLogo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40rem;
+}
