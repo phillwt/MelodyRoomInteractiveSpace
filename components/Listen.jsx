@@ -25,24 +25,31 @@ useEffect(() => {
   }
 }, [showLines]);
 
-function toggleAudio(){
-    if (isPlaying) {
-        audioRef.current.pause();
-    } else {
-        audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
+function toggleAudio() {
+  if (!audioRef.current) return;
+
+  if (isPlaying) {
+    audioRef.current.pause();
+  } else {
+    audioRef.current.play();
+  }
+  setIsPlaying(prev => !prev);
 }
 
   return (
     <div className={styles.page}>
         {/* Title */}
-      <div className={styles.title} onClick={toggleAudio}>
+      <div className={styles.title}>
         <p>Listen </p>
-        <audio ref={audioRef} src="/Aylex - Let's Party (mp3cut.net).mp3" loop></audio> 
       </div> 
 
         <div className={styles.centerWrapper}>
+
+        <audio ref={audioRef} src="/Aylex - Let's Party (freetouse.com).mp3" loop></audio>
+        <div className={styles.music} onClick={toggleAudio}>
+          {isPlaying ? "⏸️" : "▶️"}
+        </div>
+      
 
       {/* Image */}
       <img src="/elodie.svg" className={`${styles.mainImg} ${isWiggling ? styles.wiggle: ""}`}

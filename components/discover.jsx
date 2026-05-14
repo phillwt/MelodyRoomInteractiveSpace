@@ -94,16 +94,6 @@ export default function DiscoverElement() {
             paddingBottom: "100px",
         }}>
 
-
-            <div>
-                <p style={{
-                    fontFamily:"Momo Signature, cursive",
-                    fontSize: "4rem",
-                    fontWeight: 400,
-                    color:"white",
-                }}>Discover</p>
-            </div>
-
             <div style={{
                 display: "flex",
                 flexDirection: "column",
