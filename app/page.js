@@ -39,11 +39,16 @@ export default function Home() {
       }}>
 
         <h1 style={{
-          fontSize: "5rem",
+          fontSize: "4.5rem",
+          color:"white",
+          fontWeight: 800,
+          textAlign: "center",
         }}>Welcome to Melody Room</h1>
 
         <h2 style={{
           fontSize: "2.5rem",
+          color:"white",
+          textAlign: "center",
         }}>Your music is a vibe, why keep it to yourself?</h2>
         <div style={{
           display: "flex",
@@ -52,13 +57,15 @@ export default function Home() {
         }}>
           <h3 style={{
             fontSize: "2rem",
+            color:"white",
           }}>With Melody Room you can</h3>
 
           <button style={{
             fontSize: "2rem",
             padding: "0.5rem",
-            borderRadius: "25%",
-            backgroundColor: "#190E32"
+            borderRadius: 20,
+            backgroundColor: "#190E32",
+            color:"#915fff",
           }} onClick={() => {
             Update();
           }}>{buttonText}</button>
