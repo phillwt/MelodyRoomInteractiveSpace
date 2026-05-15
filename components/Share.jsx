@@ -73,7 +73,7 @@ export default function Share() {
     <div
       style={{
         background: "linear-gradient(#190E32 0%,  #915FFF 100%)",
-        minHeight: "100vh",
+        minHeight: "80vh",
         padding: "1.5rem",
       }}
     >
@@ -179,7 +179,7 @@ export default function Share() {
               style={{
                 animation: send ? "draw 4.0s ease forwards" : "none",
               }}
-              d="M 100 130 C 300 130, 200 50, 400 50"
+              d="M 80 132 C 300 130, 200 50, 420 40"
             />
           </svg>
         </div>

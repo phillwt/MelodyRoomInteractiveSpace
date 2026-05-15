@@ -85,12 +85,12 @@ export default function DiscoverElement() {
     return (
         <div style={{
             width: "100%",
-            height: "100vh",
+            height: "80vh",
             background: "linear-gradient(#190E32 0%,  #915FFF 100%)",
             display: "flex",
             justifyContent: "space-around",
             alignItems: "baseline",
-            paddingTop: "100px",
+            paddingTop: "250px",
             paddingBottom: "100px",
         }}>
             <div style={{

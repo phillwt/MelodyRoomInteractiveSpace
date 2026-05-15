@@ -288,7 +288,7 @@ export default function Connect() {
 
   function handleStartRoom() {
     setPhase("connecting");
-    setTimeout(() => { setPhase("room"); setIsPlaying(true); }, 2200);
+    setTimeout(() => { setPhase("room"); setIsPlaying(true); }, 1000);
   }
 
   function handleLeave() {

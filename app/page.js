@@ -36,13 +36,12 @@ export default function Home() {
         flexDirection: "column",
         width: "100%",
         height: "100%",
+        fontFamily: "'Open Sans', sans-serif"
       }}>
 
         <img src="/Logo-White.svg" style={{
           height: "4rem",
-          position: "absolute",
-          top: "1.5rem",
-          left: "1.5rem"
+          marginTop: "2rem"
         }}></img>
 
           <h1 style={{
@@ -60,7 +59,7 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "1rem",
+          gap: "0.75rem",
           marginTop: "2rem",
           marginBottom: "1rem"
         }}>
@@ -72,7 +71,7 @@ export default function Home() {
             fontSize: "2rem",
             padding: "0.5rem",
             borderRadius: "15px",
-            backgroundColor: "#190E32",
+            backgroundColor: "rgba(255,255,255,0)",
             fontFamily: "Momo Signature, cursive",
             fontWeight: 400,
             fontStyle: "normal",
