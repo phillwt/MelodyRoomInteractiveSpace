@@ -83,7 +83,8 @@ export default function Share() {
             fontFamily: "Momo Signature, cursive",
             fontWeight: 400,
             fontStyle: "normal",
-            fontSize: "4rem"
+            fontSize: "4rem",
+            color: "white",
         }}>Share</p>
       </div> */}
 
