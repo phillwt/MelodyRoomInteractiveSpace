@@ -10,8 +10,8 @@ import Connect from "@/components/Connect";
 
 export default function Home() {
   const [component, setComponent] = useState(<DiscoverElement></DiscoverElement>);
-  const componentList = [<DiscoverElement></DiscoverElement>, <Listen></Listen>, <Share></Share>, <Connect></Connect>];
-  const buttonList = ["Discover", "Listen", "Share", "Connect"];
+  const componentList = [<DiscoverElement></DiscoverElement>, <Share></Share>, <Connect></Connect>, <Listen></Listen>];
+  const buttonList = ["Discover", "Share", "Connect", "Listen"];
   const [buttonText, setButtonText] = useState("Discover")
   const [componentNum, setComponentNum] = useState(1);
 
@@ -50,11 +50,11 @@ export default function Home() {
             marginTop: "1rem"
           }}>Welcome to MelodyRoom</h1>
 
-        {/* <h2 style={{
-          fontSize: "2rem",
+        <h2 style={{
+          fontSize: "1.5rem",
           textAlign: "center",
           marginTop: "0.25rem"
-        }}>Your music is a vibe, why keep it to yourself?</h2> */}
+        }}>Your music is a vibe, why keep it to yourself?</h2>
         <div style={{
           display: "flex",
           flexDirection: "column",
@@ -64,7 +64,8 @@ export default function Home() {
           marginBottom: "1rem"
         }}>
           <h3 style={{
-            fontSize: "2rem",
+            marginTop: "1rem",
+            fontSize: "2.5rem",
           }}>With MelodyRoom you can</h3>
 
           <button style={{
