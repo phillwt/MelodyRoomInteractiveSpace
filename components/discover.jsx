@@ -85,12 +85,12 @@ export default function DiscoverElement() {
     return (
         <div style={{
             width: "100%",
-            height: "100vh",
+            height: "80vh",
             background: "linear-gradient(#190E32 0%,  #915FFF 100%)",
             display: "flex",
             justifyContent: "space-around",
             alignItems: "baseline",
-            paddingTop: "100px",
+            paddingTop: "250px",
             paddingBottom: "100px",
         }}>
 
@@ -120,7 +120,9 @@ export default function DiscoverElement() {
                         transition: "background-color 0.2s ease-in-out, padding 0.2s ease-in-out",
                     }}
                 />
-                <p>Click on Icon to pause scroll</p><p>& Hover over song for more info</p>
+                <p style={{
+                    marginTop: "0.75rem"
+                }}>Click on icon to pause scroll</p><p>Hover over song for more info</p>
             </div>
 
             <div style={{
@@ -153,6 +155,7 @@ export default function DiscoverElement() {
                         />
                         <h3 style={{
                             margin: "5px",
+                            marginTop: "0.75rem"
                         }}>{musicAlbum}</h3>
                         <h5 style={{
                             margin: "5px",

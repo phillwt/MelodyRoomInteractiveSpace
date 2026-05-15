@@ -32,40 +32,49 @@ export default function Home() {
       <header style={{
         background: "linear-gradient(#915FFF 0%, #190E32 100%)",
         display: "flex",
-        gap: "2rem",
+        // gap: "2rem",
         flexDirection: "column",
         width: "100%",
         height: "100%",
+        fontFamily: "'Open Sans', sans-serif"
       }}>
 
-        <h1 style={{
-          fontSize: "4.5rem",
-          color:"white",
-          fontWeight: 800,
-          textAlign: "center",
-        }}>Welcome to Melody Room</h1>
+        <img src="/Logo-White.svg" style={{
+          height: "4rem",
+          marginTop: "2rem"
+        }}></img>
 
-        <h2 style={{
-          fontSize: "2.5rem",
-          color:"white",
+          <h1 style={{
+            fontSize: "4rem",
+            textAlign: "center",
+            marginTop: "1rem"
+          }}>Welcome to MelodyRoom</h1>
+
+        {/* <h2 style={{
+          fontSize: "2rem",
           textAlign: "center",
-        }}>Your music is a vibe, why keep it to yourself?</h2>
+          marginTop: "0.25rem"
+        }}>Your music is a vibe, why keep it to yourself?</h2> */}
         <div style={{
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
-          gap: "1rem",
+          gap: "0.75rem",
+          marginTop: "2rem",
+          marginBottom: "1rem"
         }}>
           <h3 style={{
             fontSize: "2rem",
-            color:"white",
-          }}>With Melody Room you can</h3>
+          }}>With MelodyRoom you can</h3>
 
           <button style={{
             fontSize: "2rem",
             padding: "0.5rem",
-            borderRadius: 20,
-            backgroundColor: "#190E32",
-            color:"#915fff",
+            borderRadius: "15px",
+            backgroundColor: "rgba(255,255,255,0)",
+            fontFamily: "Momo Signature, cursive",
+            fontWeight: 400,
+            fontStyle: "normal",
           }} onClick={() => {
             Update();
           }}>{buttonText}</button>

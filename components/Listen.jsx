@@ -39,9 +39,7 @@ function toggleAudio() {
   return (
     <div className={styles.page}>
         {/* Title */}
-      <div className={styles.title}>
-        <p>Listen </p>
-      </div> 
+      {/* <div className={styles.title}>Listen</div>  */}
 
         <div className={styles.centerWrapper}>
 
