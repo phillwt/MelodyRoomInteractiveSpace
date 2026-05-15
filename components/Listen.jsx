@@ -15,6 +15,12 @@ function hoverWiggle(state) {
 }
 
 useEffect(() => {
+  if (audioRef.current) {
+    audioRef.current.volume = 0.5;
+  }
+}, [])
+
+useEffect(() => {
   if (showLines) {
     const timer = setTimeout(() => {
       setShowImages(true);
