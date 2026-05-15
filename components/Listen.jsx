@@ -16,7 +16,7 @@ function hoverWiggle(state) {
 
 useEffect(() => {
   if (audioRef.current) {
-    audioRef.current.volume = 0.5;
+    audioRef.current.volume = 0.75;
   }
 }, [])
 
