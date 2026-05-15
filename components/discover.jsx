@@ -93,6 +93,7 @@ export default function DiscoverElement() {
             paddingTop: "100px",
             paddingBottom: "100px",
         }}>
+
             <div style={{
                 display: "flex",
                 flexDirection: "column",

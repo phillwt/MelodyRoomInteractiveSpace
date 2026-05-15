@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./Listen.module.css";
 
 export default function Listen() {
@@ -7,7 +7,8 @@ export default function Listen() {
 const [isWiggling, setIsWiggling] = useState(false);
 const [showLines, setShowLines] = useState(false);
 const [showImages, setShowImages] = useState(false);
-
+const audioRef = useRef(null);
+const [isPlaying, setIsPlaying] = useState(false);
 
 function hoverWiggle(state) {
   setIsWiggling(state);
@@ -24,13 +25,31 @@ useEffect(() => {
   }
 }, [showLines]);
 
+function toggleAudio() {
+  if (!audioRef.current) return;
+
+  if (isPlaying) {
+    audioRef.current.pause();
+  } else {
+    audioRef.current.play();
+  }
+  setIsPlaying(prev => !prev);
+}
 
   return (
     <div className={styles.page}>
         {/* Title */}
-      <div className={styles.title}>Listen</div> 
+      <div className={styles.title}>
+        <p>Listen </p>
+      </div> 
 
         <div className={styles.centerWrapper}>
+
+        <audio ref={audioRef} src="/Aylex - Let's Party (freetouse.com).mp3" loop></audio>
+        <div className={styles.music} onClick={toggleAudio}>
+          {isPlaying ? "⏸️" : "▶️"}
+        </div>
+      
 
       {/* Image */}
       <img src="/elodie.svg" className={`${styles.mainImg} ${isWiggling ? styles.wiggle: ""}`}
@@ -49,8 +68,11 @@ useEffect(() => {
       {/* 4 smaller images */}
       <div className={styles.images}>
         <img src="/topright.svg" className={`${styles.smallImg} ${styles.imgTopRight} ${showImages ? styles.showImg:""}`}></img>
+
         <img src="/topleft.svg" className={`${styles.smallImg} ${styles.imgTopLeft} ${showImages ? styles.showImg:""}`}></img>
+
         <img src="/bottomright.svg" className={`${styles.smallImg} ${styles.imgBottomRight} ${showImages ? styles.showImg:""}`}></img>
+
         <img src="/bottomleft.svg" className={`${styles.smallImg} ${styles.imgBottomLeft} ${showImages ? styles.showImg:""}`}></img>
       </div>
      </div>
